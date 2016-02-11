@@ -3,10 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>testapp</title>
+    <link href="content/bootstrap.min.css" rel="stylesheet">
+    <link href="content/bootstrap.min.theme.css" rel="stylesheet">
+    <script src="vendor/jquery-2.2.0.js"></script>
+    <script src="vendor/bootstrap.min.js"></script>
+    <script src="vendor/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-route.js"></script>
+    <script src="scripts/app.js"></script>
 </head>
-<body>
-   <p>
-       Choose two branches to see what’s changed or to start a new pull request
-   </p>
+
+<body ng-app="myAngularApplication">
+
+    <div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    <br/>
+    <div ng-view>
+        <!--
+           This DIV loads templates depending upon route.
+       -->
+    </div>
+
 </body>
 </html>
